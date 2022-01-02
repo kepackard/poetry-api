@@ -1,24 +1,28 @@
-let poemData;
+alert('JS file is loaded');
 
-const $date = $('#date');
-const $title = $('#title');
-const $author = $('#author');
-const $copyright = $('#copyright');
+
+
+// let poemData;
+
+// const $date = $('#date');
+// const $title = $('#title');
+// const $author = $('#author');
+// const $copyright = $('#copyright');
 
 
 // function handleGetData(event) {
 //     event.preventDefault();
 
-    $.ajax({
-        url:'https://api.poems.one/pod'
-    }).then(
-        (data) => {
-            console.log(data);
-        },
-        (error) => {
-            console.log('bad request', error);
-        }
-    );
+    // $.ajax({
+    //     url:'https://api.poems.one/pod'
+    // }).then(
+    //     (data) => {
+    //         console.log(data);
+    //     },
+    //     (error) => {
+    //         console.log('bad request', error);
+    //     }
+    // );
 
 
 
