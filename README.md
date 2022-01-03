@@ -15,7 +15,7 @@ A new poem each day.
 
 
 # Getting Started
-[Click here](xxxx) to see the app in action!
+[Click here](https://poemoftheday.netlify.app) to see the app in action!
 
 # Future Enhancements
 
