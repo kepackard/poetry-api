@@ -1,43 +1,48 @@
-alert('JS file is loaded');
+
+// VARIABLES AND CONSTANTS
+// const BASE_URL = 'https://api.poems.one/pod/';
+
+let poemData;
 
 
+// CACHED ELEMENT REFERENCES
 
-// let poemData;
+const $date = $('#date');
+const $title = $('#title');
+const $author = $('#author');
+const $poem = $('#poem');
+const $copyright = $('#copyright');
 
-// const $date = $('#date');
-// const $title = $('#title');
-// const $author = $('#author');
-// const $copyright = $('#copyright');
+// EVENT LISTENERS
 
+// click on 'get poem!'
 
-// function handleGetData(event) {
-//     event.preventDefault();
+// FUNCTIONS
 
-    // $.ajax({
-    //     url:'https://api.poems.one/pod'
-    // }).then(
-    //     (data) => {
-    //         console.log(data);
-    //     },
-    //     (error) => {
-    //         console.log('bad request', error);
-    //     }
-    // );
+// init();
 
-
-
-//         (poem) => {
-//         poemData = poem;
-//         render();
-//         },
-//         (error) => {
-//         console.log('bad request', error);
-//         }
-//     );
-
-//     function render() {
-//         $date.text(poem.Date);
-//         $title.text(poem.Title);
-//         $author.text(poem.Author);
-//         }
+// function init() {
+//     getPoemData(); // load poem of the day
 // }
+
+function getPoemData() {
+    // fetch data
+    $.ajax('https://api.poems.one/pod/')
+    .then(function(data) {
+        // save data locally
+        poemData = data;
+        // transfer data to DOM
+        render();
+    }, function(error) {
+        console.log(error);
+    });
+}
+
+function render() {
+    $date.text(poemData.contents.poems.date);
+    // $title.text(poemData.contents.poems.poem.title);
+    // $author.text(poemData.contents.poems.poem.author);
+    // $poem.text(poemData.contents.poems.poem); 
+    // $copyright.text(poemData.copyright);
+    // $image.text(poemData.image);
+}

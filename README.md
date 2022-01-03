@@ -1,4 +1,5 @@
 # Poem of the Day
+![#e69d55](https://via.placeholder.com/15/e69d55/000000?text=+)
 
 A new poem each day.
 
