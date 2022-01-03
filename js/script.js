@@ -26,11 +26,11 @@ const $copyright = $('#copyright');
 // }
 
 function getPoemData() {
-    // fetch data
+    // fetch response
     $.ajax('https://api.poems.one/pod/')
-    .then(function(data) {
+    .then(function(response) {
         // save data locally
-        poemData = data;
+        poemData = response;
         // transfer data to DOM
         render();
     }, function(error) {
@@ -39,10 +39,19 @@ function getPoemData() {
 }
 
 function render() {
-    $date.text(poemData.contents.poems.date);
-    // $title.text(poemData.contents.poems.poem.title);
-    // $author.text(poemData.contents.poems.poem.author);
-    // $poem.text(poemData.contents.poems.poem); 
-    // $copyright.text(poemData.copyright);
+    $date.html(poemData.contents.poems[0].date);
+    $title.html(poemData.contents.poems[0].poem.title);
+    $author.html(poemData.contents.poems[0].poem.author);
+    $poem.html(poemData.contents.poems[0].poem.poem); 
+    $copyright.html(poemData.copyright);
     // $image.text(poemData.image);
+}
+
+function copyright() {
+    var x = document.getElementById("copyright");
+    if (x.style.display === "block") {
+        x.style.display = "none";
+    } else {
+        x.style.display = "block";
+    }
 }
