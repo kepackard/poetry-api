@@ -1,34 +1,39 @@
 * {
     box-sizing: border-box;
-    border: 1px dotted pink;
+    /* border: 1px dotted pink; */
 }
 
 body {
-    font-family: Helvetica cursive;
+    font-family: Arial, Helvetica, sans-serif;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     min-height: 100vh;
 }
 
 header, footer: {
-    display: flex;
-    align-items: center;
-    height: 3.123rem;
+    /* display: flex; */
+    /* align-items: center; */
+    /* height: 3.123rem; */
+    
 }
 
 main {
-    flex-grow: 1;
+    /* flex-grow: 1; */
+    border:rgb(253, 217, 181) solid 2px;
+
 }
 
 .wrapper { 
-    position: relative; 
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    /* position: relative;  */
+    /* height: 100vh;
+    width: 100%; */
+    /* display: flex; */
+    /* flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between; */
     background-image: url('./assets/background.jpeg');
     background-size: cover;
+    
 }
 
 .wrapper::before {
@@ -39,4 +44,50 @@ main {
     bottom: 0px;
     left: 0px;
     background-color: rgba(0,0,0,0.025);
+}
+
+h1 {
+    font-family: 'Sacramento', serif;
+    font-size: 80px;
+    font-weight: 700;
+    text-align: center;
+    padding: 25px;
+    margin: 0px 0px 25px 0px;
+    color:white;
+    text-shadow: 2px 2px 0px #e89038,
+        4px 4px 0px #e69d55,
+        6px 6px 0px #e3ab74,
+        8px 8px 0px #edbb8a,
+        10px 10px 0px #edc39a,
+        12px 12px 0px #f0d3b6,
+        14px 14px 0px #f5e5d5;
+}
+
+.poem {
+    order: 3;
+    font-family: 'Sacramento', serif;
+    font-size: 25px;
+}
+
+.title {
+    order: 1;
+    font-family: 'Sacramento', serif;
+    font-size: 25px;
+}
+
+.author {
+    order: 2;
+    font-family: 'Sacramento', serif;
+    font-size: 25px;
+}
+
+.date {
+    order: 0;
+    font-family: 'Sacramento', serif;
+    font-size: 25px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
 }
