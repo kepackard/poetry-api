@@ -38,6 +38,9 @@ function getPoemData() {
     });
 }
 
+getPoemData();
+
+
 function render() {
     $date.html(poemData.contents.poems[0].date);
     $title.html(poemData.contents.poems[0].poem.title);
